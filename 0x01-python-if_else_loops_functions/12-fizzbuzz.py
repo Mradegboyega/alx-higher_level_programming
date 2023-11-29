@@ -1,13 +1,17 @@
-def fizzbuzz():
-    for num in range(1, 101):
-        if num % 3 == 0 and num % 5 == 0:
-            print("FizzBuzz", end=' ')
-        elif num % 3 == 0:
-            print("Fizz", end=' ')
-        elif num % 5 == 0:
-            print("Buzz", end=' ')
-        else:
-            print(num, end=' ')
+#!/usr/bin/python3
 
-# Example usage:
-fizzbuzz()
+def fizzbuzz():
+    # Loop from 1 to 100
+    for i in range(1, 101):
+        # Check if the number is a multiple of both three and five
+        if i % 3 == 0 and i % 5 == 0:
+            print("FizzBuzz", end=" ")
+        # Check if the number is a multiple of three
+        elif i % 3 == 0:
+            print("Fizz", end=" ")
+        # Check if the number is a multiple of five
+        elif i % 5 == 0:
+            print("Buzz", end=" ")
+        else:
+            print(i, end=" ")
+

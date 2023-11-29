@@ -1,7 +1,13 @@
-def pow(a, b):
-    result = a ** b
-    return result
+#!/usr/bin/python3
 
-# Example usage:
-power_result = pow(2, 3)
-print(f"The result is: {power_result}")
+def pow(a, b):
+    # Check if both inputs are numbers
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        print("Invalid input: both inputs must be numbers")
+        return
+
+    # Calculate the result of a to the power of b
+    result = a ** b
+
+    # Return the result
+    return result
