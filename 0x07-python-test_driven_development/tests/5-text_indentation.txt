@@ -1,0 +1,23 @@
+"""
+>>> from io import StringIO
+>>> import sys
+
+# Test case 1: Normal input
+>>> text_indentation("Hello. How are you? This is a test.")
+Hello$
+$
+ How are you$
+$
+ This is a test.$
+
+# Test case 2: Empty input
+>>> text_indentation("")
+$
+
+# Test case 3: Invalid input (not a string)
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+"""
+

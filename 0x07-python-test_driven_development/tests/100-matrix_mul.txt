@@ -1,0 +1,35 @@
+"""
+>>> from io import StringIO
+>>> import sys
+
+# Test case 1: Matrix multiplication
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+# Test case 2: Matrix multiplication with different dimensions
+>>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+[[13, 16]]
+
+# Test case 3: Empty matrix
+>>> matrix_mul([], [])
+Traceback (most recent call last):
+    ...
+ValueError: m_a can't be empty or m_b can't be empty
+
+# Test case 4: Matrix with invalid element type
+>>> matrix_mul([[1, 2], [3, 'four']], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+    ...
+TypeError: m_a should contain only integers or floats or m_b should contain only integers or floats
+
+# Test case 5: Matrix multiplication with incompatible dimensions
+>>> matrix_mul([[1, 2], [3, 4]], [[5, 6, 7], [8, 9, 10]])
+Traceback (most recent call last):
+    ...
+ValueError: m_a and m_b can't be multiplied
+
+# Test case 6: Matrix multiplication with floats
+>>> matrix_mul([[1.5, 2.5], [3.5, 4.5]], [[1.5, 2.5], [3.5, 4.5]])
+[[9.0, 14.0], [17.5, 27.0]]  # Fix expected result
+"""
+

@@ -1,0 +1,29 @@
+"""
+>>> from io import StringIO
+>>> import sys
+
+# Test case 1: Lazy Matrix multiplication
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+# Test case 2: Lazy Matrix multiplication with different dimensions
+>>> lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+[[13, 16]]
+
+# Test case 3: Empty matrix
+>>> lazy_matrix_mul([], [])
+Traceback (most recent call last):
+    ...
+ValueError: Matrices can't be empty
+
+# Test case 4: Lazy Matrix multiplication with incompatible dimensions
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6, 7], [8, 9, 10]])
+Traceback (most recent call last):
+    ...
+ValueError: Matrices can't be multiplied
+
+# Test case 5: Lazy Matrix multiplication with floats
+>>> lazy_matrix_mul([[1.5, 2.5], [3.5, 4.5]], [[1.5, 2.5], [3.5, 4.5]])
+[[9.0, 14.0], [17.5, 27.0]]
+"""
+
