@@ -1,0 +1,31 @@
+# Test Case 1: Valid integer
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("test", 42)
+
+# Test Case 2: Value is not an integer
+>>> try:
+...     bg.integer_validator("test", "not_an_integer")
+... except TypeError as e:
+...     str(e)
+'test must be an integer'
+
+# Test Case 3: Value is less than or equal to 0
+>>> try:
+...     bg.integer_validator("test", 0)
+... except ValueError as e:
+...     str(e)
+'test must be greater than 0'
+
+# Test Case 4: Another valid integer
+>>> bg.integer_validator("another_test", 123)
+
+# Test Case 5: Valid integer, but name is an empty string
+>>> bg.integer_validator("", 5)
+
+# Test Case 6: Valid integer, negative value
+>>> try:
+...     bg.integer_validator("negative_test", -10)
+... except ValueError as e:
+...     str(e)
+'negative_test must be greater than 0'
+

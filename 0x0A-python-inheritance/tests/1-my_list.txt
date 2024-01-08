@@ -1,0 +1,15 @@
+# Test Case 1
+>>> my_list_instance = MyList([4, 2, 8, 1, 6])
+>>> my_list_instance.print_sorted()
+[1, 2, 4, 6, 8]
+
+# Test Case 2
+>>> empty_list_instance = MyList([])
+>>> empty_list_instance.print_sorted()
+[]
+
+# Test Case 3
+>>> single_element_list = MyList([42])
+>>> single_element_list.print_sorted()
+[42]
+
